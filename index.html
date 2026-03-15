@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">&lt;<span>dev</span>.portfolio /&gt;</div>
+  <ul class="nav-links">
+    <li><a href="#about">Sobre</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projetos</a></li>
+    <li><a href="#experience">Experiência</a></li>
+    <li><a href="#contact">Contato</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire me</a>
+  <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Disponível para oportunidades</div>
+
+    <h1>
+      <span class="line1">Olá, eu sou</span>
+      <span class="line2" id="hero-name">Seu Nome</span>
+      <span class="line3">// Engenheiro de Software Full Stack</span>
+    </h1>
+
+    <p class="hero-desc">
+      Transformo ideias complexas em soluções digitais elegantes. Especializado em arquiteturas escaláveis, APIs robustas e interfaces que encantam usuários.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">Ver Projetos →</a>
+      <a href="#contact" class="btn-outline">Entre em contato</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">5<span>+</span></span>
+        <span class="stat-label">Anos de experiência</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">30<span>+</span></span>
+        <span class="stat-label">Projetos entregues</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">12<span>+</span></span>
+        <span class="stat-label">Clientes satisfeitos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMINAL -->
+  <div class="hero-terminal">
+    <div class="terminal-header">
+      <div class="terminal-dot dot-red"></div>
+      <div class="terminal-dot dot-yellow"></div>
+      <div class="terminal-dot dot-green"></div>
+      <span class="terminal-title">~/portfolio — zsh</span>
+    </div>
+    <div class="terminal-body">
+      <div class="t-line"><span class="t-prompt">~</span><span class="t-cmd"> whoami</span></div>
+      <div class="t-out highlight">dev_fullstack</div>
+      <br>
+      <div class="t-line"><span class="t-prompt">~</span><span class="t-cmd"> cat skills.json</span></div>
+      <div class="t-out">{ "frontend": ["React", "Vue", "TypeScript"],</div>
+      <div class="t-out">&nbsp; "backend": ["Node.js", "Python", "Go"],</div>
+      <div class="t-out">&nbsp; "cloud": ["AWS", "Docker", "K8s"],</div>
+      <div class="t-out">&nbsp; "db": ["PostgreSQL", "MongoDB"] }</div>
+      <br>
+      <div class="t-line"><span class="t-prompt">~</span><span class="t-cmd"> git log --oneline -3</span></div>
+      <div class="t-out">a4f2e1 feat: microservices architecture</div>
+      <div class="t-out">b9c3d7 fix: optimize DB queries 10x</div>
+      <div class="t-out">e1a5f9 chore: CI/CD pipeline setup</div>
+      <br>
+      <div class="t-line"><span class="t-prompt">~</span><span class="t-cmd"> <span class="t-cursor"></span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-photo-wrap fade-in">
+      <div class="about-photo-frame">
+        <div class="about-photo-placeholder">
+          <div class="avatar-circle">SN</div>
+          <p style="color: var(--muted); font-size: 0.8rem; font-family: var(--mono);">// Sua foto aqui</p>
+        </div>
+      </div>
+      <div class="about-photo-tag">
+        <div class="tag-available">● Disponível</div>
+        <div style="color: var(--muted); font-size: 0.7rem; margin-top: 0.2rem;">para projetos freelance</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <span class="section-tag">sobre mim</span>
+      <h2 class="section-title fade-in">Código limpo,<br>resultados reais</h2>
+
+      <p class="about-text fade-in stagger-1">
+        Sou um engenheiro de software apaixonado por criar soluções que fazem diferença. Com mais de 5 anos de experiência, trabalho desde a arquitetura de sistemas até o pixel final da interface.
+      </p>
+      <p class="about-text fade-in stagger-2">
+        Acredito que bom código é código que outras pessoas conseguem ler, manter e evoluir. Cada projeto é uma oportunidade de aprender algo novo e entregar algo melhor.
+      </p>
+
+      <div class="about-highlights fade-in stagger-3">
+        <div class="highlight-item">
+          <div class="highlight-icon">📍</div>
+          <div class="highlight-label">Localização</div>
+          <div class="highlight-value">Belo Horizonte, BR</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🎓</div>
+          <div class="highlight-label">Formação</div>
+          <div class="highlight-value">Ciência da Computação</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">💼</div>
+          <div class="highlight-label">Regime</div>
+          <div class="highlight-value">CLT ou PJ / Remoto</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🌐</div>
+          <div class="highlight-label">Idiomas</div>
+          <div class="highlight-value">PT-BR, English (B2)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header">
+    <span class="section-tag">habilidades</span>
+    <h2 class="section-title fade-in">Stack técnico</h2>
+    <p class="section-sub fade-in stagger-1">Ferramentas e tecnologias que uso no dia a dia para construir produtos incríveis.</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card fade-in">
+      <div class="skill-card-header">
+        <div class="skill-icon purple">⚛</div>
+        <span class="skill-name">Frontend</span>
+      </div>
+      <div class="skill-tags">
+        <span class="tag purple">React</span>
+        <span class="tag purple">Next.js</span>
+        <span class="tag purple">TypeScript</span>
+        <span class="tag purple">Vue.js</span>
+        <span class="tag gray">Tailwind CSS</span>
+        <span class="tag gray">Framer Motion</span>
+        <span class="tag gray">Redux</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in stagger-1">
+      <div class="skill-card-header">
+        <div class="skill-icon teal">⚙</div>
+        <span class="skill-name">Backend</span>
+      </div>
+      <div class="skill-tags">
+        <span class="tag teal">Node.js</span>
+        <span class="tag teal">Python</span>
+        <span class="tag teal">Go</span>
+        <span class="tag teal">FastAPI</span>
+        <span class="tag gray">REST API</span>
+        <span class="tag gray">GraphQL</span>
+        <span class="tag gray">gRPC</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in stagger-2">
+      <div class="skill-card-header">
+        <div class="skill-icon amber">☁</div>
+        <span class="skill-name">Cloud & DevOps</span>
+      </div>
+      <div class="skill-tags">
+        <span class="tag amber">AWS</span>
+        <span class="tag amber">Docker</span>
+        <span class="tag amber">Kubernetes</span>
+        <span class="tag amber">Terraform</span>
+        <span class="tag gray">GitHub Actions</span>
+        <span class="tag gray">CI/CD</span>
+        <span class="tag gray">Nginx</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in stagger-3">
+      <div class="skill-card-header">
+        <div class="skill-icon red">🗄</div>
+        <span class="skill-name">Dados & Banco</span>
+      </div>
+      <div class="skill-tags">
+        <span class="tag red">PostgreSQL</span>
+        <span class="tag red">MongoDB</span>
+        <span class="tag red">Redis</span>
+        <span class="tag red">Elasticsearch</span>
+        <span class="tag gray">Kafka</span>
+        <span class="tag gray">RabbitMQ</span>
+        <span class="tag gray">Prisma</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-header">
+    <span class="section-tag">portfólio</span>
+    <h2 class="section-title fade-in">Projetos em destaque</h2>
+    <p class="section-sub fade-in stagger-1">Uma seleção dos projetos mais impactantes que construí.</p>
+  </div>
+
+  <div class="projects-filter fade-in stagger-2">
+    <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
+    <button class="filter-btn" onclick="filterProjects('web', this)">Web App</button>
+    <button class="filter-btn" onclick="filterProjects('api', this)">API / Backend</button>
+    <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile</button>
+  </div>
+
+  <div class="projects-grid" id="projects-grid">
+
+    <div class="project-card fade-in" data-category="web">
+      <div class="project-thumb">
+        <div class="project-thumb-art thumb-gradient-1">🛒</div>
+        <div class="project-overlay">
+          <a href="#" class="overlay-btn primary">Demo</a>
+          <a href="#" class="overlay-btn secondary">GitHub</a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">Web App</span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3 class="project-title">E-commerce Platform</h3>
+        <p class="project-desc">Plataforma completa de e-commerce com checkout, pagamentos via Pix/cartão, gestão de estoque e painel admin em tempo real.</p>
+        <div class="project-stack">
+          <span class="tag teal">Next.js</span>
+          <span class="tag purple">TypeScript</span>
+          <span class="tag amber">AWS</span>
+          <span class="tag gray">Stripe</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in stagger-1" data-category="api">
+      <div class="project-thumb">
+        <div class="project-thumb-art thumb-gradient-2">🔌</div>
+        <div class="project-overlay">
+          <a href="#" class="overlay-btn primary">Demo</a>
+          <a href="#" class="overlay-btn secondary">GitHub</a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">API / Microsserviços</span>
+          <span class="project-year">2024</span>
+        </div>
+        <h3 class="project-title">API Gateway Microservices</h3>
+        <p class="project-desc">Arquitetura de microsserviços com gateway centralizado, autenticação JWT, rate limiting e observabilidade com Grafana.</p>
+        <div class="project-stack">
+          <span class="tag teal">Go</span>
+          <span class="tag amber">Docker</span>
+          <span class="tag red">Redis</span>
+          <span class="tag gray">Grafana</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in stagger-2" data-category="web">
+      <div class="project-thumb">
+        <div class="project-thumb-art thumb-gradient-3">📊</div>
+        <div class="project-overlay">
+          <a href="#" class="overlay-btn primary">Demo</a>
+          <a href="#" class="overlay-btn secondary">GitHub</a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">SaaS / Dashboard</span>
+          <span class="project-year">2023</span>
+        </div>
+        <h3 class="project-title">Analytics Dashboard SaaS</h3>
+        <p class="project-desc">Plataforma de analytics B2B com dashboards customizáveis, relatórios automáticos, alertas inteligentes e multi-tenancy.</p>
+        <div class="project-stack">
+          <span class="tag purple">React</span>
+          <span class="tag teal">Node.js</span>
+          <span class="tag red">PostgreSQL</span>
+          <span class="tag gray">Chart.js</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in stagger-3" data-category="mobile">
+      <div class="project-thumb">
+        <div class="project-thumb-art thumb-gradient-4">📱</div>
+        <div class="project-overlay">
+          <a href="#" class="overlay-btn primary">Demo</a>
+          <a href="#" class="overlay-btn secondary">GitHub</a>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">Mobile App</span>
+          <span class="project-year">2023</span>
+        </div>
+        <h3 class="project-title">FinTech Mobile App</h3>
+        <p class="project-desc">Aplicativo de gestão financeira pessoal com categorização automática de gastos, metas de economia e integração Open Finance.</p>
+        <div class="project-stack">
+          <span class="tag purple">React Native</span>
+          <span class="tag teal">Python</span>
+          <span class="tag red">MongoDB</span>
+          <span class="tag amber">AWS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header">
+    <span class="section-tag">trajetória</span>
+    <h2 class="section-title fade-in">Experiência profissional</h2>
+    <p class="section-sub fade-in stagger-1">Onde trabalhei e o que construí ao longo dos anos.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-period">Jan 2023 — Presente</div>
+      <div class="timeline-role">Senior Software Engineer</div>
+      <div class="timeline-company">Empresa Atual — São Paulo, SP (Remoto)</div>
+      <div class="timeline-desc">
+        Liderança técnica de time de 5 engenheiros na construção de plataforma SaaS B2B. Redesenhei a arquitetura do backend para microsserviços, reduzindo latência média em 40%. Implementei cultura de code review e aumentei cobertura de testes de 30% para 85%.
+      </div>
+      <div class="timeline-techs">
+        <span class="tag purple">React</span>
+        <span class="tag teal">Node.js</span>
+        <span class="tag amber">AWS</span>
+        <span class="tag red">PostgreSQL</span>
+        <span class="tag gray">Kubernetes</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-period">Mar 2021 — Dez 2022</div>
+      <div class="timeline-role">Full Stack Developer</div>
+      <div class="timeline-company">Startup de Saúde — Belo Horizonte, MG</div>
+      <div class="timeline-desc">
+        Desenvolvimento full stack de plataforma de telemedicina usada por mais de 50 mil pacientes. Integrei sistemas de pagamento, videoconferência e prontuário eletrônico. Otimizei queries críticas reduzindo tempo de resposta de 8s para 300ms.
+      </div>
+      <div class="timeline-techs">
+        <span class="tag purple">Vue.js</span>
+        <span class="tag teal">Python</span>
+        <span class="tag red">MongoDB</span>
+        <span class="tag gray">WebRTC</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-period">Jun 2019 — Fev 2021</div>
+      <div class="timeline-role">Junior Developer</div>
+      <div class="timeline-company">Agência Digital — Belo Horizonte, MG</div>
+      <div class="timeline-desc">
+        Desenvolvimento de sites e aplicações web para clientes de varejo e serviços. Primeiro contato com metodologias ágeis, Git em equipe e deploys em produção. Entregou mais de 15 projetos dentro do prazo.
+      </div>
+      <div class="timeline-techs">
+        <span class="tag purple">React</span>
+        <span class="tag teal">PHP</span>
+        <span class="tag gray">MySQL</span>
+        <span class="tag gray">WordPress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-header">
+    <span class="section-tag">contato</span>
+    <h2 class="section-title fade-in">Vamos trabalhar juntos?</h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info fade-in">
+      <h3>Estou disponível para<br>novos desafios.</h3>
+      <p>Seja um projeto freelance, uma oportunidade CLT/PJ ou uma conversa sobre tecnologia — adoraria conversar. Respondo em até 24 horas.</p>
+
+      <div class="contact-links">
+        <a href="mailto:seuemail@email.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          <div>
+            <div style="font-size:0.75rem; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.05em;">Email</div>
+            <div>seuemail@email.com</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/seuperfil" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          <div>
+            <div style="font-size:0.75rem; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.05em;">LinkedIn</div>
+            <div>linkedin.com/in/seuperfil</div>
+          </div>
+        </a>
+        <a href="https://github.com/seuperfil" target="_blank" class="contact-link">
+          <div class="contact-link-icon" style="font-family: var(--mono);">gh</div>
+          <div>
+            <div style="font-size:0.75rem; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.05em;">GitHub</div>
+            <div>github.com/seuperfil</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="fade-in stagger-1">
+      <div class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-input" placeholder="Seu nome completo">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="seu@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Assunto</label>
+          <input type="text" class="form-input" placeholder="Oportunidade de trabalho / Projeto">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensagem</label>
+          <textarea class="form-textarea" placeholder="Conte um pouco sobre o projeto ou oportunidade..."></textarea>
+        </div>
+        <button class="btn-send" onclick="handleSubmit()">Enviar mensagem →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    &lt;<span>dev</span>.portfolio /&gt; — Feito com ☕ e muito código
+  </div>
+  <div class="footer-right">
+    <a href="#home">Início</a>
+    <a href="#about">Sobre</a>
+    <a href="#projects">Projetos</a>
+    <a href="#contact">Contato</a>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
